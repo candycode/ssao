@@ -1,4 +1,4 @@
-#include <osgViewer/Viewer >
+#include <osgViewer/Viewer>
 #include <osgViewer/ViewerEventHandlers>
 #include <osg/Texture>
 #include <osg/TextureRectangle>
@@ -20,6 +20,7 @@
 #include <sstream>
 #include <fstream>
 #include <set>
+#include <stdexcept>
 
 #include "ssao.h"
 #include "texture_preprocess.h"

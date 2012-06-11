@@ -6,6 +6,7 @@
 #include <osgDB/ReadFile>
 #include <osgViewer/Viewer>
 #include <map>
+#include <stdexcept>
 
 static const char PASSTHROUGH_VERT[] =
 "varying vec4 color;"

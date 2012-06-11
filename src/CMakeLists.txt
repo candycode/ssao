@@ -1,18 +1,18 @@
-cmake_minimum_required( VERSION 2.4 )
+cmake_minimum_required( VERSION 2.6 )
 
-PROJECT( ssao )
+project( ssao )
 
-SET( OSG_INCLUDE_DIR "/usr/local/include" CACHE PATH "OpenSceneGraph include path" )
-SET( OSG_LIB_DIR "/usr/local/lib" CACHE PATH "OpenSceneGraph library path" )
+set( OSG_INCLUDE_DIR "/usr/local/include" CACHE PATH "OpenSceneGraph include path" )
+set( OSG_LIB_DIR "/usr/local/lib" CACHE PATH "OpenSceneGraph library path" )
 
-INCLUDE_DIRECTORIES( ${OSG_INCLUDE_DIR} )
-LINK_DIRECTORIES( ${OSG_LIB_DIR} )
+include_directories( ${OSG_INCLUDE_DIR} )
+link_directories( ${OSG_LIB_DIR} )
+message( ${OSG_INCLUDE_DIR})
+set( SRCS  main.cpp ssao.cpp manipulator.cpp ssao.h texture_preprocess.h manipulator.h posnormal_mrt_shaders.h )
 
-SET( SRCS  main.cpp ssao.cpp manipulator.cpp ssao.h texture_preprocess.h manipulator.h posnormal_mrt_shaders.h )
+add_executable( ssao ${SRCS} )
 
-ADD_EXECUTABLE( ssao ${SRCS} )
-
-TARGET_LINK_LIBRARIES( ssao
+target_link_libraries( ssao
 optimized OpenThreads debug OpenThreadsd
 optimized osg debug osgd
 optimized osgGA debug osgGAd
