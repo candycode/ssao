@@ -2,6 +2,7 @@
 
 #include <string>
 #include <fstream>
+#include <stdexcept>
 
 #include <osg/Node>
 #include <osg/StateSet>
@@ -425,7 +426,10 @@ osgGA::GUIEventHandler* CreateSSAOUniformsAndHandler( const osg::Node& model,
 std::string ReadTextFile( const std::string& fname )
 {
     std::ifstream in( fname.c_str() );
-    if( !in ) return "";
+    if( !in ) {
+        throw std::logic_error( "Cannot open file " + fname );
+        return "";
+    }
     std::string str,strTotal;
     std::getline( in, str);
     while( in ) {
@@ -479,7 +483,9 @@ std::string BuildShaderSourcePrefix( bool mrt,
 /// Create shader program.
 osg::Program* CreateSSAOProgram( const SSAOParameters& ssaoParams, const std::string& path )
 {
-    if( ssaoParams.vertShader.empty() && ssaoParams.fragShader.empty() ) return 0;
+    if( ssaoParams.vertShader.empty() && ssaoParams.fragShader.empty() ) {
+        return 0;
+    }
     const std::string SHADER_SOURCE_PREFIX( 
         BuildShaderSourcePrefix( ssaoParams.mrt, ssaoParams.shadeStyle, ssaoParams.enableTextures ) );
     osg::ref_ptr< osg::Shader > vertexShader = 

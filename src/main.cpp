@@ -27,7 +27,11 @@
 #include "manipulator.h"
 #include "posnormal_mrt_shaders.h"
 
-static const std::string SHADER_PATH="C:/projects/ssao/trunk/src";
+#ifdef WIN32
+static const std::string SHADER_PATH="C:/projects/ssao/src/shaders";
+#else
+static const std::string SHADER_PATH="/home/uvaretto/projects/ssao/src/shaders";
+#endif
 static const int MAX_FBO_WIDTH = 2048;
 static const int MAX_FBO_HEIGHT = 2048;
 
@@ -241,7 +245,7 @@ SSAOParameters ParseSSAOParameters( osg::ArgumentParser& arguments )
     
     //command line parameter value
     std::string cmdParStr; 
-      
+ 
 	// read command line parameters
     p.simple =  arguments.read( "-s" );
 	if( arguments.read( "-hw",  cmdParStr ) )
