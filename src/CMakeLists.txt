@@ -16,7 +16,7 @@ target_link_libraries( ssao
 optimized OpenThreads debug OpenThreadsd
 optimized osg debug osgd
 optimized osgGA debug osgGAd
-optimized osgdb debug osgdbd
+optimized osgDB debug osgdDB
 optimized osgUtil debug osgUtild
 optimized osgViewer debug osgViewerd
 optimized osgText debug osgTextd

@@ -99,10 +99,10 @@ public:
                     
                     // find first matrix transform above picked geode
                     osg::ref_ptr< osg::MatrixTransform > t;
-                    osg::NodePath::reverse_iterator it;
-                    for( it = hitr->nodePath.rbegin(); it != hitr->nodePath.rend(); ++it )
+                    osg::NodePath::const_reverse_iterator rit = hitr->nodePath.rbegin();
+                    for( ; rit != hitr->nodePath.rend(); ++rit )
                     {
-                        t = dynamic_cast< osg::MatrixTransform* >( *it );
+                        t = dynamic_cast< osg::MatrixTransform* >( *rit );
                         if( t ) break;
                     }
                     if( t )
