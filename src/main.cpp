@@ -331,18 +331,18 @@ int main( int argc, char **argv )
 		// Add OB extensions
 		osgDB::Registry* r = osgDB::Registry::instance();
 		assert( r );
-		r->addFileExtensionAlias( "pdb",  "molecule" );
-		r->addFileExtensionAlias( "ent",  "molecule" );
-		r->addFileExtensionAlias( "hin",  "molecule" );
-		r->addFileExtensionAlias( "xyz",  "molecule" );
-		r->addFileExtensionAlias( "mol",  "molecule" );
-		r->addFileExtensionAlias( "mol2", "molecule" );
-		r->addFileExtensionAlias( "cube", "molecule" );
-		r->addFileExtensionAlias( "g03",  "molecule" );
-		r->addFileExtensionAlias( "g98",  "molecule" );
-		r->addFileExtensionAlias( "gam",  "molecule" );
-		r->addFileExtensionAlias( "coor", "molecule" );
-		r->addFileExtensionAlias( "ref",  "molecule" );
+		r->addFileExtensionAlias( "pdb",  "chem" );
+		r->addFileExtensionAlias( "ent",  "chem" );
+		r->addFileExtensionAlias( "hin",  "chem" );
+		r->addFileExtensionAlias( "xyz",  "chem" );
+		r->addFileExtensionAlias( "mol",  "chem" );
+		r->addFileExtensionAlias( "mol2", "chem" );
+		r->addFileExtensionAlias( "cube", "chem" );
+		r->addFileExtensionAlias( "g03",  "chem" );
+		r->addFileExtensionAlias( "g98",  "chem" );
+		r->addFileExtensionAlias( "gam",  "chem" );
+		r->addFileExtensionAlias( "coor", "chem" );
+		r->addFileExtensionAlias( "ref",  "chem" );
 
         // READ PARAMETERS //
 		// read and parse ssao parameters

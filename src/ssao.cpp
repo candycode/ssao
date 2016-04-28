@@ -97,7 +97,7 @@ public:
         }
         return handled;            
     }
-    void accept( osgGA::GUIEventHandlerVisitor& v ) { v.visit( *this ); }
+    //void accept( osgGA::GUIEventHandlerVisitor& v ) { v.visit( *this ); }
 private:
     
     void ToggleSSAO()
@@ -268,7 +268,7 @@ public:
         }
         return handled;            
     }
-    void accept( osgGA::GUIEventHandlerVisitor& v ) { v.visit( *this ); }
+    //void accept( osgGA::GUIEventHandlerVisitor& v ) { v.visit( *this ); }
 private:
     
     void ToggleSSAO()

@@ -1,6 +1,6 @@
 // computes average kernel width and step multiplier from passed radius
 
-#define TEXTURE_ENABLED
+//#define TEXTURE_ENABLED
 #define USE_OBJECT_RADIUS
 //#define MRT_ENABLED
 

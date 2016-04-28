@@ -1,4 +1,4 @@
-#define TEXTURE_ENABLED
+//#define TEXTURE_ENABLED
 
 // IN: color, normal, position, radius, ssao, depthMap, viewport width, viewport height.
 // OUT: occlusion modified gl_Color

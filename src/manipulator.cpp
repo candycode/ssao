@@ -259,7 +259,7 @@ public:
         }
         return handled;            
     }
-    void accept( osgGA::GUIEventHandlerVisitor& v ) { v.visit( *this ); }
+    //void accept( osgGA::GUIEventHandlerVisitor& v ) { v.visit( *this ); }
 private:
     osg::ref_ptr< osg::Group > parent_;
     osg::ref_ptr< osgManipulator::Dragger > previousDragger_;
